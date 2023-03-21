@@ -184,7 +184,7 @@ bool isEven(int a) {
 }
 
 bool isOdd(int b) {
-    return b % 2 == 0;
+    return b % 2 != 0;
 }
 
 bool isFactor(int a, int b) {
@@ -196,7 +196,7 @@ int sumEven(int arr[], int size) {
     for (int i = 0; i < size; i++) {
         if (arr[i] % 2 == 0) {
             if (i + 1 == size) {
-                cout << arr[i] << endl;
+                cout << arr[i] << " = " << endl;
             } else {
                 cout << arr[i] << " + ";
             }
@@ -213,7 +213,7 @@ int sumOdd(int arr[], int size) {
     for (int i = 0; i < size; i++) {
         if (arr[i] % 2 == 1) {
             if (i + 1 == size) {
-                cout << arr[i] << endl;
+                cout << arr[i] << " = " << endl;
             } else {
                 cout << arr[i] << " + ";
             }
@@ -226,7 +226,7 @@ int sumOdd(int arr[], int size) {
 }
 
 int inputArr(int arr[], int size) {
-    cout << "Isi array indeks ke - " << size << " : ";
+    cout << "Bilangan ke - " << size + 1 << " : ";
     cin >> arr[size];
     return arr[size];
 }
