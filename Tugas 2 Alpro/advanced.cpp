@@ -10,7 +10,7 @@ bool isOdd(int b);
 bool isFactor(int a, int b);
 int sumEven(int arr[], int size);
 int sumOdd(int arr[], int size);
-int inputArr(int arr[], int size); //buat fungsi input array
+void inputArr(int arr[], int size); //buat fungsi input array
 void outputArr(int arr[], int size); //buat fungsi output array
 
 int main() {
@@ -54,9 +54,7 @@ int main() {
         cout << "Masukkan jumlah angka yang ingin dimasukkan : ";
         cin >> size;
         cout << "Masukkan angka-angkamu!"<< endl;
-        for (int i = 0; i < size; i++){
-            inputArr(arr, i);
-        }
+        inputArr(arr, size);
         cout << "Angkamu dalam array : ";
         outputArr(arr, size);
         cout << "\nNilai paling besar adalah : " << maxArray(arr, size);
@@ -66,9 +64,7 @@ int main() {
         cout << "Masukkan jumlah angka yang ingin dimasukkan : ";
         cin >> size;
         cout << "Masukkan angka-angkamu! " << endl;
-        for (int i = 0; i < size; i++){
-            inputArr(arr, i);
-        }
+        inputArr(arr, size);
         cout << "\nAngkamu dalam array : ";
         outputArr(arr, size);
         cout << "\nNilai paling kecil adalah : " << minArray(arr, size);
@@ -101,9 +97,7 @@ int main() {
         cout << "Masukkan jumlah angka yang ingin dimasukkan : ";
         cin >> size;
         cout << "Masukkan angka-angkamu! " << endl;
-        for (int i = 0; i < size; i++){
-            inputArr(arr, i);
-        }
+        inputArr(arr, size);
         cout << "Angkamu dalam array : ";
         outputArr(arr, size);
         cout << "\nJumlah dari bilangan genap yang diinput adalah : ";
@@ -114,9 +108,7 @@ int main() {
         cout << "Masukkan jumlah angka yang ingin dimasukkan : ";
         cin >> size;
         cout << "Masukkan angka-angkamu! " << endl;
-        for (int i = 0; i < size; i++){
-            inputArr(arr, i);
-        }
+        inputArr(arr, size);
         cout << "Angkamu dalam array : ";
         outputArr(arr, size);
         cout << "\nJumlah dari bilangan ganjil yang diinput adalah : ";
@@ -225,10 +217,11 @@ int sumOdd(int arr[], int size) {
     return sum;
 }
 
-int inputArr(int arr[], int size) {
-    cout << "Bilangan ke - " << size + 1 << " : ";
-    cin >> arr[size];
-    return arr[size];
+void inputArr(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << "Bilangan ke - " << i + 1 << " : ";
+        cin >> arr[i];
+    }
 }
 
 void outputArr(int arr[], int size) {
