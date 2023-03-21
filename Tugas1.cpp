@@ -32,4 +32,6 @@ int main() {
     cout << sum(arr, 4) << endl;
     float arrr[] = {1, 3, 4, 5};
     cout << avg(arrr, 4);
+    
+    return 0;
 }
